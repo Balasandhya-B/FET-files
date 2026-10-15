@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class student1
+{
+    public:
+    void fn()
+    {
+        cout<<"Sandhya"<<endl;
+    }
+    void fn(int i)
+    {
+        cout<<"Sandhya"<<i<<endl;
+    }
+};
+
+int main()
+{
+    student1 s;
+    s.fn();//function 1 will be called
+    s.fn(2);//function 2 will be called
+    return 0;
+}

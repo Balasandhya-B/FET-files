@@ -1,0 +1,25 @@
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+     int N,diff;
+     cout<<"Enter the size of array ";cin>>N;
+     int A[N];
+     cout<<"\nEnter elements for the array ";
+     for(int i=0;i<N;i++)
+     {
+        cin>>A[i];
+     }
+     for(int i=1;i<N;i++)
+     {
+        int a=A[0];
+        if(A[i]>=a)
+        {
+            a=A[i];
+            diff=a-A[i+1];
+            cout<<"\nThe maximum adjacent difference is "<<diff;
+            break;
+}   
+        }
+       
+       
+    return 0;
+}

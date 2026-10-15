@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>JS1</title>
+</head>
+<body>
+<script>
+
+let a=Number(prompt("Enter a number"))
+let b=Number(prompt("Enter a number"))
+let operator=prompt("Enter an operator")
+alert("Calculation");
+switch(operator)
+{
+case '+':
+document.write(a+b);
+break;
+case '-':
+document.write(a-b);
+break;
+case '*':
+document.write(a*b);
+break;
+case '/':
+document.write(a/b);
+break;
+case '%':
+document.write(a%b);
+break;
+//default is optional and break in default also optional
+default:
+document.write("Enter a valid operator");
+}
+if(confirm("Do you want to continue "))
+{
+document.write("  yes");
+}
+else
+{
+document.write("  no");
+}
+
+</script>
+</body>
+</html>

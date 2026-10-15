@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>JS1</title>
+</head>
+<body>
+<script>
+let num1,num2,num3;
+num1=Number(prompt("Enter a number "));
+num2=Number(prompt("Enter a number "));
+num3=Number(prompt("Enter a number "));
+//nested if
+if(num1>num2)
+{
+if(num1>num3)
+{
+document.write("Largest number is "+num1);
+}
+}
+//if else
+else if(num2>num1 && num2>num3)
+document.write("Largest number is "+num2);
+else if(num3>num1 && num3>num1)
+document.write("Largest number is "+num3);
+else if(num1==num2 && num1>num3)
+document.write("Largest number is "+num1);
+else if(num3==num2 && num3>num1)
+document.write("Largest number is "+num2);
+else
+document.write("Largest number is "+num3);
+
+</script>
+</body>
+</html>

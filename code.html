@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class bankaccount
+{
+    private:
+    int accno,bal;
+    string cname;
+    public:
+    void deposit()
+    {
+        int dep;
+        cout<<"\n Enter deposit amt ";cin>>dep;
+        bal=bal+dep;
+    }
+    void withdraw()
+    {
+        int wid;
+        cout<<"\n Enter withdrawal amt ";cin>>wid;
+        bal=bal-wid;
+    }
+    void dispaccdetails()
+    {
+        cout<<"\n Account number "<<accno;
+        cout<<"\n Customer name "<<cname;
+        cout<<"\n Balance "<<bal;
+    }
+};
+class savingaccount:public bankaccount
+{
+    
+};
+int main()
+{
+    
+    return 0;
+}

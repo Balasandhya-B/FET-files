@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Class
+</title></head>
+<body>
+<style>
+.shop
+{
+background-color:red;
+border:2px dotted blue;
+margin:3px;
+padding:2px;
+}
+</style>
+<div class="shop">
+<p>"Home of Biryani – Cooked with passion, served like family."</p>
+</div>
+</body>
+</html>

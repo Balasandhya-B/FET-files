@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Formvalid</title>
+</head>
+<body>
+<script>
+function  validform()
+{
+let name=document.getElementById("name").value;
+let password=document.getElementById("pass").value;
+let cpassword=document.getElementById("cpass").value;
+let age=document.getElementById("age").value;
+if(name=="")
+{
+alert("Username cannot be empty");
+return false;
+}
+if(name.length<3)
+{
+alert("Username must contain 3 characters");
+return false;
+}
+if(password=="")
+{
+alert("Password cannot be empty");
+return false;
+}
+if(password.length<6)
+{
+alert("Username must contain 6 characters");
+return false;
+}
+
+}
+</script>
+<form >
+<label>Username: </lable>
+<input type="text" id="name"><br>
+<label>Password: </lable>
+<input type="password" id="pass"><br>
+<label>Confirm password: </lable>
+<input type="password" id="cpass"><br>
+<label>Phone number: </lable>
+<input type="phone" id="phone"><br>
+<label>Age: </lable>
+<input type="number" id="age"><br>
+<input type="submit" value="register">
+</form>
+</body>
+</html>

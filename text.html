@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Form Validation</title>
+</head>
+<body>
+<form>
+<label> Name </label>
+<input type="text" "required"><br>
+<label> Email </label>
+<input type="email" "required"><br>
+<label> Age </label>
+<input type="number" min="18" max="50" "required"><br>
+<label> Phone number </label>
+<input type="tel" pattern="[0-9]{10}" "required"><br>
+<label> Password </label>
+<input type="password" minlength="8" maxlength="15" pattern="[A-Za-z ]+" "required"><br>
+<label> Upload your resume </label>
+<input type="file" accept =".pdf" "required"><br>
+
+<input type="submit">
+</form>
+</body>
+</html>

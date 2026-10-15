@@ -1,0 +1,34 @@
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int r,c,sum1=0,sum2=0,sum3=0;
+    cin>>r;
+    cin>>c;
+    int arr[r][c];
+    for(int i=0;i<r;i++)
+    {
+    for(int j=0;j<c;j++)
+    {
+       cin>>arr[i][j]; 
+    }  
+    }
+    for(int j=0;j<c;j++)
+    {
+       sum1+=arr[0][j]; 
+    }  
+    for(int j=0;j<c;j++)
+    {
+       sum2+=arr[1][j]; 
+    }  
+    for(int j=0;j<c;j++)
+    {
+       sum3+=arr[2][j]; 
+    } 
+    if((sum1>sum2 && sum1>sum3 )|| (sum1==sum2 && sum1==sum3))
+    cout<<"\nlargest sum "<<sum1;
+    else if((sum2>sum1 && sum2>sum3) ||  (sum1==sum2 && sum1==sum3))
+    cout<<"\nlargest sum "<<sum2;
+    else
+    cout<<"\nlargest sum "<<sum3;
+    
+    return 0;
+}

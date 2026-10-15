@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class student1
+{
+    public:
+    void fn()
+    {
+        cout<<"Sandhya1"<<endl;
+    }
+    
+};
+class student2:public student1
+{
+    public:
+    void fn()
+    {
+        cout<<"Sandhya2"<<endl;
+    }
+};
+int main()
+{
+    student2 s;
+    s.fn();
+    return 0;
+}

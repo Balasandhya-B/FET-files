@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Selectors
+</title></head>
+<body>
+<style>
+p
+{
+color:blue;
+}
+h1,h2
+{
+color:red;
+text-align:center;
+}
+.cls
+{
+color:green;
+}
+.identity
+{
+color:pink;
+}
+
+</style>
+<h1>Selectors</h1>
+<h2>Element selector and group selector</h2>
+<p>Element selector is given only with element name like h1 where as group selector is given like h1,p</p>
+<div class="cls">
+<h3>For class selector .classname is used</h3> 
+</div>
+<h4 id="identity">For class selector #idname is used</h4>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>
+TECH LAUNCHPAD 2026 EVENT
+</title>
+<style>
+header
+{
+text-align:center;
+color:#004d4d;
+background-color:#66ffff;
+font-family:cambrica;
+font-size:30px;
+padding:20px;
+margin:0.5px;
+border:2px;
+}
+nav
+{
+text-align:center;
+font-size:22px;
+font-style:italic;
+color:#004d4d;
+background-color:#b3ffff;
+padding:15px;
+
+}
+form
+{
+text-align:left;
+background-color:#e6ffff;
+color:#004d4d;
+font-size:18px;
+font-style:italic;
+
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+<script>
+function validform()
+{
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let phone=document.getElementById("phone").value;
+let dept=document.getElementById("dept").value;
+let gender=document.getElementById("gender").value;
+let pass=document.getElementById("pass").value;
+let cpass=document.getElementById("cpass").value;
+let term=document.getElementById("term").value;
+if(name=="")
+{
+alert("Student name should not be empty");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+if(email=="")
+{
+alert("Email should not be empty");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+if(dept=="")
+{
+alert("Must select any one department");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+
+
+if(phone=="")
+{
+alert("Phone number should not be empty");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+
+
+if(pass=="")
+{
+alert("Password should not be empty");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+if(password.length<6)
+{
+alert("password must contain atleast 6 character");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+
+if(cpass=="")
+{
+alert("Confirm password should not be empty");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+if(password!=cpassword)
+
+{
+alert("password and confirm password should match ");
+return false;
+document.write("Please fill the form with the given specifications")
+
+}
+
+
+
+else
+{
+document.write("The form has been successfully submitted")
+}
+}
+</script>
+
+
+
+
+
+
+<header>
+<i>
+TECH LAUNCHPAD 2026 EVENT
+</i>
+</header>
+<nav>
+<a href="">Details</a>
+</nav>
+<center>
+<form onsubmit="validform()">
+<fieldset><legend>Student detials</legend>
+<lable>Student Name </lable>
+<input type="text" pattern="[A-Za-z ]+" id="name"><br>
+<lable>Email </lable>
+<input type="email" id="email"><br> 
+<lable>Department</lable>
+<select dept="Department" id="dept">
+<option value="CSE"></option>
+<option value="CSE">CSE</option>
+<option value="IT">IT</option>
+<option value="ECE">ECE</option>
+<option value="EEE">EEE</option>
+</select>
+ <br>
+<lable>Gender </lable>
+<lable>	 Male </lable>
+<input type="radio" id="gender">
+<label>	 Female </lable>
+<input type="radio" id="gender"> <br>
+<lable>Phone number </lable>
+<input type="phone" id="phone"><br>
+
+<lable>Password </lable>
+<input type="password" id="pass"><br> 
+<lable>Confirm Password </lable>
+<input type="password" id="cpass"><br>
+<input type="checkbox" id="term"> 
+<lable>Terms and conditions <br>
+I hereby declare that the information given above are true to the best of my knowledge </lable><br>
+<input type="submit" value="Register">
+<input type="reset"> 
+</fieldset>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>FORM VALIDATION
+</title>
+<script>
+function validForm()
+{
+let name;
+let password;
+name=document.getElementById("name").value;
+password=document.getElementById("pass").value;
+let cpassword=document.getElementById("cpass").value;
+let age=document.getElementById("age").value;
+let phone=document.getElementById("phone").value;
+
+if(name=="")
+{
+alert("Name can't be empty ");
+return false;
+}
+if(name.length<3)
+{
+alert("Name must contain atleast 3 character");
+return false;
+}
+if(password=="")
+{
+alert("password can't be empty ");
+return false;
+}
+
+if(password.length<6)
+{
+alert("password must contain atleast 6 character");
+return false;
+}
+if(cpassword=="")
+{
+alert("password cannot be empty");
+return false;
+}
+if(password!=cpassword)
+
+{
+alert("password and confirm password should match ");
+return false;
+}
+if(age=="")
+{
+alert("age cannot be empty");
+}
+if(age<18 || age>60)
+{
+alert("age is invalid");
+}
+if(phone=="")
+{
+alert("phone number cannot be empty");
+return false;
+}
+if(phone!=10)
+
+{
+alert("phone number must contain 10 digits ");
+return false;
+}
+
+
+}
+</script>
+</head>
+<body>
+<form onsubmit="validForm()">
+<label> Name </label>
+<input type="text" id="name"><br>
+<label> Password </label>
+<input type="password" id="pass"><br>
+<label> Confirm Password </label>
+<input type="password" id="cpass"><br>
+<label> Age </label>
+<input type="number" id="age"><br>
+<label> phone number </label>
+<input type="phone" id="phone"><br>
+
+
+<input type="submit" value="register">
+</form>
+</body>
+</html>

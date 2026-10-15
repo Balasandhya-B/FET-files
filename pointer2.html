@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class student1
+{
+    public:
+    virtual void fn()
+    {
+        cout<<"Sandhya1"<<endl;
+    }
+    
+};
+class student2:public student1
+{
+    public:
+    void fn()
+    {
+        cout<<"Sandhya2"<<endl;
+    }
+};
+class student3:public student2
+{
+    public:
+    void fn()
+    {
+        cout<<"Sandhya3"<<endl;
+    }
+};
+int main()
+{
+    student1 *s1;//pointer base class
+    student2 s2;//object derived class
+    student3 s3;//object derived class
+    s1=&s3;//base pointer stores address of object of derived class 1
+    s1->fn();//using base class pointer accessing derived class function (virtual function)
+    s1=&s2;//base pointer stores address of object of derived class 2
+    s1->fn();//using base class pointer accessing derived class function (virtual function)
+    return 0;
+}
