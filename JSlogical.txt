@@ -1,0 +1,34 @@
+*Logical Operators*
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical Operators</title>
+</head>
+<body>
+    <h2>JavaScript Logical Operators</h2>
+
+    <script>
+        let age = 20;
+        let hasID = true;
+
+        document.write("Age = " + age + "<br>");
+        document.write("Has ID = " + hasID + "<br><br>");
+
+        document.write(
+            "Age >= 18 AND has ID: " +
+            (age >= 18 && hasID) + "<br>"
+        );
+
+        document.write(
+            "Age < 18 OR has ID: " +
+            (age < 18 || hasID) + "<br>"
+        );
+
+        document.write(
+            "NOT has ID: " + (!hasID) + "<br>"
+        );
+    </script>
+</body>
+</html>

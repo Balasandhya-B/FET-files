@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>CSS transition
+</title></head>
+<body>
+<style>
+.box
+{
+width:100px;
+height:100px;
+background-color:blue;
+animation:moveBox 10s ease;
+}
+@keyframes moveBox{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(200px);
+}
+}
+</style>
+<div class="box">BOX</div>
+</body>
+</html>

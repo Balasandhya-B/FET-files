@@ -1,0 +1,10 @@
+<html>
+<body>
+<h3> JavaScript </h3>
+<script>
+document.write("Student details");
+const char clg="SECE";
+char rno="26cs029";
+char name="Balasandhya B";
+
+</script>

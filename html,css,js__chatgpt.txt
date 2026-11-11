@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 CSS3 Website</title>
+
+    <!-- Bootstrap Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: blue;
+            --bg: white;
+            --text: black;
+            --card: #eeeeee;
+        }
+
+        body.dark {
+            --bg: #222;
+            --text: white;
+            --card: #444;
+        }
+
+        /* CSS Selectors and Box Model */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.5s;
+        }
+
+        /* Header and Flexbox */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* CSS Grid */
+        .container-box {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* CSS Animation */
+        @keyframes move {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: move 1s;
+        }
+
+        /* Form Styling */
+        form {
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Accordion */
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+
+        .answer.show {
+            max-height: 100px;
+        }
+
+        /* Responsive Design - Mobile First */
+        @media (min-width: 600px) {
+            .container-box {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .container-box {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <h2>My Website</h2>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#register">Register</a>
+        </nav>
+
+        <button onclick="darkMode()">Dark Mode</button>
+    </header>
+
+    <main>
+
+        <!-- Section and Article -->
+        <section id="home">
+            <h1>Welcome to My Website</h1>
+            <article>
+                <p>This website uses HTML5 and CSS3.</p>
+            </article>
+        </section>
+
+        <!-- CSS Grid Dashboard / Product Cards -->
+        <section id="products">
+            <h2>Our Products</h2>
+
+            <div class="container-box">
+
+                <article class="card">
+                    <h3>Product 1</h3>
+                    <p>First Product</p>
+                    <button>Buy Now</button>
+                </article>
+
+                <article class="card">
+                    <h3>Product 2</h3>
+                    <p>Second Product</p>
+                    <button>Buy Now</button>
+                </article>
+
+                <article class="card">
+                    <h3>Product 3</h3>
+                    <p>Third Product</p>
+                    <button>Buy Now</button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- HTML5 Registration Form -->
+        <section id="register">
+            <h2 align="center">Registration Form</h2>
+
+            <form onsubmit="return validateForm()">
+
+                <label>Name:</label>
+                <input type="text" id="name"
+                       placeholder="Enter Name" required>
+
+                <label>Email:</label>
+                <input type="email" required>
+
+                <label>Password:</label>
+                <input type="password" required>
+
+                <label>Phone:</label>
+                <input type="tel" pattern="[0-9]{10}" required>
+
+                <label>Date of Birth:</label>
+                <input type="date">
+
+                <label>Age:</label>
+                <input type="number" min="13" max="100">
+
+                <label>Gender:</label>
+                <select>
+                    <option>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <label>Message:</label>
+                <textarea placeholder="Enter Message"></textarea>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+        <!-- Animated Accordion -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <button onclick="toggleAnswer()">
+                What is HTML5?
+            </button>
+
+            <div class="answer" id="answer">
+                <p>HTML5 is used to create web pages.</p>
+            </div>
+        </section>
+
+        <!-- HTML5 Canvas -->
+        <section>
+            <h2>Canvas Element</h2>
+
+            <canvas id="myCanvas"
+                    width="300" height="100">
+            </canvas>
+        </section>
+
+        <!-- HTML5 Media Elements -->
+        <section>
+            <h2>Media Elements</h2>
+
+            <video width="250" controls>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <p>Copyright 2026 My Website</p>
+    </footer>
+
+    <script>
+
+        // Dark and Light Mode
+        function darkMode() {
+            document.body.classList.toggle("dark");
+        }
+
+        // Form Validation
+        function validateForm() {
+            let name = document.getElementById("name").value;
+
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return false;
+        }
+
+        // Accordion Toggle
+        function toggleAnswer() {
+            document.getElementById("answer")
+                .classList.toggle("show");
+        }
+
+        // Canvas Drawing
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(20, 20, 150, 60);
+
+        ctx.fillStyle = "white";
+        ctx.font = "16px Arial";
+        ctx.fillText("HTML5 Canvas", 30, 55);
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

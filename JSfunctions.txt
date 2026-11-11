@@ -1,0 +1,41 @@
+<html>
+<body>
+<h3>Function</h3>
+<script>
+function welcome()
+{
+document.write("Function !!!");
+}
+welcome();
+
+function add1(a,b)
+{
+let sum=a+b;
+document.write("Sum "+sum);
+}
+add1(10,20);
+
+function add(c,d)
+{
+return (a+b);
+}
+let sum1=add(10,20);
+document.write("Sum "+sum1);
+
+function lar(e,f)
+{
+if(e>f)
+{
+return e;
+}
+else
+{
+return f;
+}
+}
+let result=lar(15,25);
+document.write("Largest "+result);
+
+</script>
+</body>
+</html>

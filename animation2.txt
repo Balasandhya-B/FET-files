@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>CSS transition
+</title></head>
+<body>
+<style>
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation: rotateBox 2s infinite;
+}
+
+@keyframes rotateBox {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+</style>
+<div class="box">BOX</div>
+</body>
+</html>

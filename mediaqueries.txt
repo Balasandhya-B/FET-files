@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>CSS transition
+</title>
+<meta name="viewport"
+content="width=device-width,initial-scaled=1.0">
+<style>
+body{
+background-color:lightblue;
+text-align:center;
+}
+@media (max-width: 600px)
+{
+body
+{
+background-color:lightpink;
+}
+}
+</style>
+</head>
+<body>
+<h1>
+COLOR
+</h1>
+</body>
+</html>

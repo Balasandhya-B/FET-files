@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>CSS transition
+</title></head>
+<body>
+<style>
+.box {
+    width: 100px;
+    height: 100px;
+    animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+    0%   { background-color: red; }
+    50%  { background-color: yellow; }
+    100% { background-color: blue; }
+}
+</style>
+<div class="box">BOX</div>
+</body>
+</html>
